@@ -24,16 +24,17 @@ apt_wait
 echo "Installing Android Studio"
 if ! command -v snap $> /dev/null
 then
-	echo "SNAPD not found, install Android Studio Manually"
-else
-	sudo snap install android-studio --classic
-	echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.bashrc
-	echo "export PATH=$PATH:$HOME/Android/Sdk/emulator" >> ~/.bashrc
-	echo "export PATH=$PATH:$HOME/Android/Sdk/tools" >> ~/.bashrc
-	echo "export PATH=$PATH:$HOME/Android/Sdk/bin" >> ~/.bashrc
-	echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools" >> ~/.bashrc
-	source ~/.bashrc
+	echo "SNAPD not found, installing snapd and snap-store"
+  sudo apt install snapd
+  sudo snap install snap-store
 fi
+sudo snap install android-studio --classic
+echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/Android/Sdk/emulator" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/Android/Sdk/tools" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/Android/Sdk/bin" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools" >> ~/.bashrc
+source ~/.bashrc
 apt_wait
 echo "Installing Watchman"
 sudo apt install -y libssl-dev autoconf automake libtool pkg-config
