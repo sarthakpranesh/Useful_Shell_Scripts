@@ -1,0 +1,24 @@
+swipe:
+  3:
+    left:
+      command: "xdotool key super+shift+Left" 
+    right:
+      command: "xdotool key super+shift+Right"
+    up:
+      command: "xdotool key super"
+    down:
+      command: "xdotool key super"
+  4:
+    left:
+      command: "xdotool key super+ctrl+Left"
+    right:
+      command: "xdotool key super+ctrl+Right"
+    up:
+      command: "xdotool key super+ctrl+Down"
+    down:
+      command: "xdotool key super+ctrl+Up"
+pinch:
+  in:
+    command: "xdotool key super+Plus" # Zoom in
+  out:
+    command: "xdotool key super+Minus" # Zoom out
