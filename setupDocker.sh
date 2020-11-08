@@ -14,14 +14,15 @@ apt_wait () {
 
 sudo apt update
 apt_wait
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 apt_wait
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 apt_wait
-sudo apt update
+sudo apt update -y
 apt_wait
-sudo apt install docker-ce -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 apt_wait
+sudo groupadd docker
 sudo usermod -aG docker ${USER}
 su - ${USER}
