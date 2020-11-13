@@ -29,11 +29,11 @@ then
   sudo snap install snap-store
 fi
 sudo snap install android-studio --classic
-echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/Android/Sdk/emulator" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/Android/Sdk/tools" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/Android/Sdk/bin" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools" >> ~/.bashrc
+echo 'export ANDROID_HOME=$HOME/Android/Sdk' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/Android/Sdk/emulator' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/Android/Sdk/tools' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/Android/Sdk/bin' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/Android/Sdk/platform-tools' >> ~/.bashrc
 source ~/.bashrc
 apt_wait
 echo "Installing Watchman"
