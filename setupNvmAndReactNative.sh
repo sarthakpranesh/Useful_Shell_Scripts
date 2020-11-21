@@ -12,15 +12,21 @@ apt_wait () {
   fi
 }
 
+# Installing NVM - Node Version Manager
 sudo echo "Installing node version manager"
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+
+# Using NVM to install latest version of Nodejs
 echo "Installing latest version of nodejs"
 nvm install node
+
+# Installing OpenJDK 8 for java environment
 echo "Installing openjdk-8"
-apt_wait
 sudo apt install -y openjdk-8-jdk
 apt_wait
+
+# Installing Android Studio using snapd if not installed
 echo "Installing Android Studio"
 if ! command -v snap $> /dev/null
 then
@@ -29,13 +35,18 @@ then
   sudo snap install snap-store
 fi
 sudo snap install android-studio --classic
+
+# Configuring the Android Home and other paths
 echo 'export ANDROID_HOME=$HOME/Android/Sdk' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/Android/Sdk/emulator' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/Android/Sdk/tools' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/Android/Sdk/bin' >> ~/.bashrc
 echo 'export PATH=$PATH:$HOME/Android/Sdk/platform-tools' >> ~/.bashrc
+
+# Sourcing the bash terminal
 source ~/.bashrc
-apt_wait
+
+# Installing and configuring Watchman required by the React Native bundler
 echo "Installing Watchman"
 sudo apt install -y libssl-dev autoconf automake libtool pkg-config
 apt_wait
