@@ -5,7 +5,7 @@
 # Introduction
 I have been using Linux (mostly Ubuntu and flavours) for almost over a year now. But I still find myself nuking my system and doing a fresh install once in 6 months (during my sem breaks) to keep things clean. And reconfiguring everything can be a really painful job, hence these scripts help me sit back and have cup of coffee while they do this job.
 
-If you use these scripts, do at your risk. I won't take any blame if you get on boot 🤪
+If you use these scripts, do at your risk. I won't take any blame if you get stuck on boot 🤪
 
 <br />
 
