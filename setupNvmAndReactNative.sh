@@ -55,7 +55,7 @@ apt_wait
 git clone https://github.com/facebook/watchman.git -b v4.9.0 --depth 1
 cd watchman
 ./autogen.sh
-./configure --without-python --without-pcre
+./configure --without-python --without-pcre --enable-lenient
 make
 sudo make install
 apt_wait
