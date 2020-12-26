@@ -13,10 +13,6 @@ apt_wait () {
   fi
 }
 
-# Update and Upgrade system before install
-sudo apt update
-sudo apt upgrade -y
-
 # Install necessary dependencies
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 apt_wait

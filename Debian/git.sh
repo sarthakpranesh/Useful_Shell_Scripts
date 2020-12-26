@@ -1,4 +1,4 @@
 echo "Install Git"
-sudo dnf install git-all
+sudo apt install -y git
 
 bash ../gitConfig.sh
