@@ -1,5 +1,5 @@
 echo "Installing Android Studio {flatpak}"
-flatpak install com.google.AndroidStudio
+flatpak install flathub com.google.AndroidStudio
 
 echo "Configuring paths for Android Studio Sdk"
 echo 'export ANDROID_HOME=$HOME/Android/Sdk' >> ~/.bashrc
