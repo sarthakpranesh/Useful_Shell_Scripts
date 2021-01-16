@@ -105,7 +105,7 @@ sleep 3
 # Generating the fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
 # Download the script to be run in chroot as root user
-curl https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/develop/archChroot.s > archChroot.sh
+curl https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/develop/Arch/archChroot.sh > archChroot.sh
 # Copy this script into '/mnt' directory
 cp ./archChroot.sh /mnt/archChroot.sh 
 # Chroot into the installed arch to configure it as root user
