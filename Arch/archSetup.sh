@@ -104,13 +104,17 @@ echo "Stage 5: Configuring the Arch installation"
 sleep 3
 # Generating the fstab file
 genfstab -U /mnt >> /mnt/etc/fstab
+# Download the script to be run in chroot as root user
+curl https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/develop/archChroot.s > archChroot.sh
+# Copy this script into '/mnt' directory
+cp ./archChroot.sh /mnt/archChroot.sh 
 # Chroot into the installed arch to configure it as root user
-arch-chroot /mnt curl https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/develop/archChroot.sh | bash;
-
+arch-chroot /mnt bash archChroot.sh;
 # Exiting the chroot
 exit
 
 echo "Stage 5: Complete"
+sleep 3
 
 echo "Installation Complete"
 sleep 3
