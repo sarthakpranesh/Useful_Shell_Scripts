@@ -1,7 +1,13 @@
 # Warning: Use this script at your own risk
 # This script helps me install arch linux reliablily and efficiently
-# Use this command to install after live booting into arch linux:
-# wget -O - https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/develop/archSetup.sh | bash
+# Use these following commands to install arch linux, after you have entered the live boot:
+#
+# curl https://raw.githubusercontent.com/sarthakpranesh/Useful_Shell_Scripts/master/Arch/archSetup.sh > archSetup,sh
+# bash archSetup.sh
+#
+# You will be required to enter information such as drive name to install arch on or network password while the script
+# is executing.
+#
 
 
 # Default console keymap set to US, to modify the layout run:
@@ -116,8 +122,6 @@ exit
 echo "Stage 5: Complete"
 sleep 3
 
-echo "Installation Complete"
-sleep 3
+clear
 
-# Shutdown the system
-shutdown now
+echo "Arch Installation Complete"

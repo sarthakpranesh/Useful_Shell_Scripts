@@ -27,6 +27,7 @@ A small guide of what you can expect from these script. Starting with the projec
 | docker | [Debian/Ubuntu/Based](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Debian/docker.sh), [Fedora](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Fedora/docker.sh) | Installs Docker and required components. Adds user to the docker group so that docker command can be used without `sudo` |
 | reactNative | [Debian/Ubuntu/Based](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Debian/reactNative.sh), [Fedora](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Fedora/reactNative.sh) | Calls a bunch of `global` scripts {nvm, androidStudio, watchman in order} and installs `openjdk-8` as they are the dependencies required for `React Native` |
 | fusuma | [Debian/Ubuntu/Based](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Debian/fusuma.sh) | Installs `Ruby`, `libinput-tools`, `xdotool` and `Fusuma` {touch pad gestures} and configures it for use on either Elementary or Pop OS |
+| archSetup | [Arch](https://github.com/sarthakpranesh/Useful_Shell_Scripts/blob/master/Arch/archSetup.sh) | Automated installation of Arch linux. Installs xorg and gnome as the desktop environment. Sets up grub for EFI devices (if you are using a non efi device then use `arch-chroot /mnt` and install grub again). It is advised to read the script once for comments and documentation so that you can make any necessary changes if required. |
 
 <br />
 <br />
@@ -37,7 +38,7 @@ My goal with these scripts is simple, and that is to save myself tons of time th
 <br />
 
 In the future I am looking to extend this project and include achieve the following
-* Work on script to help automate my arch installation
+* Work on script to help automate my arch installation (DONE)
 * More reliable scripts
 * Single shot shell script program to do it all
 
