@@ -1,9 +1,9 @@
 swipe:
   3:
     left:
-      command: "xdotool key super+shift+Left" 
+      command: "xdotool key super+0xff09" 
     right:
-      command: "xdotool key super+shift+Right"
+      command: "xdotool key super+lShift+0xff09"
     up:
       command: "xdotool key super"
     down:
@@ -19,6 +19,6 @@ swipe:
       command: "xdotool key super+ctrl+Up"
 pinch:
   in:
-    command: "xdotool key super+Plus" # Zoom in
+    command: "xdotool key super+a" # Zoom in
   out:
     command: "xdotool key super+Minus" # Zoom out
