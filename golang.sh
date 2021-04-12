@@ -1,7 +1,7 @@
 echo "Download the golang amd64 package"
 # You can update this later when new release rolls out
-wget https://golang.org/dl/go1.15.8.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.15.8.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
 
 echo "Adding the go install location to bashrc"
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
