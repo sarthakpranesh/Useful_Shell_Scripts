@@ -1,7 +1,7 @@
 echo "Download the golang amd64 package"
 # You can update this later when new release rolls out
-wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz
+wget https://golang.org/dl/go1.17.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
 
 echo "Adding the go install location to bashrc"
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
@@ -12,7 +12,7 @@ echo 'export PATH=$PATH:$GOROOT/bin' >> ~/.bashrc
 echo "Creating directories"
 # golib for local package install and Github/GO for active local development
 mkdir -p ~/golib
-mkdir -p ~/Github/GO/src
+mkdir -p ~/Github/GO/src/github.com
 mkdir -p ~/Github/GO/bin
 mkdir -p ~/Github/GO/pkg
 
