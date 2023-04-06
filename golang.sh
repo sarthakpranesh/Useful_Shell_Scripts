@@ -1,7 +1,15 @@
+#!/usr/bin/env bash
+
+# Get Go Version supplied by user
+GO_VERSION=$1
+
 echo "Download the golang amd64 package"
 # You can update this later when new release rolls out
-wget https://golang.org/dl/go1.17.3.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
+if [ -z "$GO_VERSION" ]; then
+    GO_VERSION="1.17.3"
+fi
+wget https://golang.org/dl/go$GO_VERSION.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 
 echo "Adding the go install location to bashrc"
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
